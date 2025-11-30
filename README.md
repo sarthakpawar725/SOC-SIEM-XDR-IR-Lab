@@ -1,4 +1,4 @@
-# SOC-SIEM-XDR-IR-Lab
+# SOC- WAZUH SIEM-XDR-IR-Lab Hosted on Virtual Private Server
 SOC / IR Simulation Project: Full-Cycle Threat Detection with Wazuh XDR/SIEM
 
 
