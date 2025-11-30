@@ -25,5 +25,15 @@ This lab simulates a real Security Operations Center environment and provides ha
 ---
 
 ### ✔ Step 2: Connect to VPS via SSH (from Mac)
-```bash
+
 ssh root@<VPS_IP>
+
+Update and Install wazuh
+apt update && apt upgrade -y
+curl -sO https://packages.wazuh.com/4.7/wazuh-install.sh
+bash wazuh-install.sh -a
+The installer automatically sets up:
+
+Wazuh Manager
+Wazuh Indexer
+Wazuh Dashboard
