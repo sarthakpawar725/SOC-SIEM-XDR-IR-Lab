@@ -154,8 +154,11 @@ echo "test123" | sudo tee -a /etc/testfile.txt
 🔥 Many More Intresting Attacks and Testing
 
 
+🔷 6. Our Wazuh Server and Dashboard are ready!
 
+Screenshot:
 
+<img width="400" height="400" alt="image" src="https://github.com/user-attachments/assets/0ce4f07d-ba3a-4ebe-86f4-96fd55d0b0eb" />
 
 📌 Summary
 
