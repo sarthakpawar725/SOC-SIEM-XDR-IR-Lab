@@ -1,0 +1,29 @@
+
+# 🛠️ SOC Lab Setup & Configuration
+
+This document provides a detailed walkthrough of how I built my complete SOC home lab using:
+
+- Wazuh SIEM (Hosted on VPS)
+- Kali Linux VM (Monitored Endpoint)
+- macOS (Attacker Machine)
+- Wazuh Agent (Installed on Kali)
+
+This lab simulates a real Security Operations Center environment and provides hands-on experience in monitoring, detecting, and investigating security events.
+
+---
+
+# 🔷 1. VPS Setup (Wazuh Server)
+
+### ✔ Step 1: Create VPS on DigitalOcean
+- Droplet created: **Ubuntu 22.04 LTS**
+- Size used: **4GB RAM / 2 vCPU** (recommended for Wazuh)
+- Authentication: **Password login**
+- Firewall rule: Allowed ports `22`, `443`, `1514`, `1515`
+
+
+
+---
+
+### ✔ Step 2: Connect to VPS via SSH (from Mac)
+```bash
+ssh root@<VPS_IP>
