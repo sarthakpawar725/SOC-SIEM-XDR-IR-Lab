@@ -60,3 +60,65 @@ It allows defenders to:
 - Improve system integrity over time
 
 This makes FIM one of the foundational components of host-based intrusion detection within the Wazuh platform.
+## . Collect Additional Evidence (Commands)
+
+### Check file ownership
+ls -l /home/monu/thisistestfiletxt
+
+### Check recent user commands
+history | tail -n 20
+
+### Check system logs
+sudo tail -n 50 /var/log/syslog
+
+### Check process activity (auditd)
+sudo ausearch -f fim_test.txt
+
+
+##  Determine Root Cause (Questions, no commands)
+
+- Was the file expected?
+- Who created or modified it?
+- Why did the hash change?
+- Is the file executable?
+- Is it in a sensitive directory?
+- Did this happen during off-hours?
+
+
+##  Contain the Incident (Commands)
+
+### Delete suspicious file
+sudo rm /home/monu/fim_test.txt
+
+### Kill malicious process
+sudo pkill -f suspicious_binary
+
+### Disable suspicious user
+sudo usermod -L baduser
+
+### Block suspicious external IP
+sudo iptables -A INPUT -s <IP> -j DROP
+
+
+##  Recover and Harden (Commands)
+
+### Update and patch system
+sudo apt update && sudo apt upgrade -y
+
+### Example custom Wazuh rule (add to local_rules.xml)
+<rule id="600101" level="10">
+  <match>thisistestfile.txt.txt</match>
+  <description>Unauthorized file created</description>
+  <group>syscheck,</group>
+</rule>
+
+
+## 🟩 8. Finalize the Incident (Checklist)
+
+- What file changed  
+- When it happened  
+- Who triggered it  
+- What the file contained  
+- Why it was suspicious  
+- What containment steps were taken  
+- How the system was hardened afterward  
