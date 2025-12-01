@@ -77,7 +77,9 @@ Wazuh Dashboard: In Security Events we can see the alets generated and logs of t
 
 <img width="500" height="500" alt="image" src="https://github.com/user-attachments/assets/1cb06fe5-f2d6-451b-96ae-5c74ecc8ee09" />
 
-:
+:Dahbboard info 
+
+<img width="500" height="500" alt="image" src="https://github.com/user-attachments/assets/6cdc3dff-10c1-4731-b0b2-3f663608697c" />
 
 📄 Wazuh Integrity Monitoring Alert Explanation
 
